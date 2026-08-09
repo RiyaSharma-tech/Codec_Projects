@@ -1,1 +1,57 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sentiment Analyzer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Sentiment Analyzer</h1>
+
+        <p class="subtitle">
+            Analyze your review and discover its sentiment using AI.
+        </p>
+
+        <form method="POST">
+
+            <textarea
+                name="review"
+                placeholder="Enter your review here..."
+                required
+            ></textarea>
+
+            <button type="submit">Analyze Sentiment</button>
+
+        </form>
+
+        {% if label %}
+
+        <div class="result-card">
+
+            <h2>{{ label }}</h2>
+
+            <p>
+                Confidence:
+                <strong>{{ "%.2f"|format(score * 100) }}%</strong>
+            </p>
+
+        </div>
+
+        {% endif %}
+
+        <a href="/history" class="history-button">
+            View Review History
+        </a>
+
+    </div>
+
+</body>
+</html>
+

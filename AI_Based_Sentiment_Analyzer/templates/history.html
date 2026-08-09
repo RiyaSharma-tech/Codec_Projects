@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Review History</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container history-container">
+
+        <h1>Review History</h1>
+
+        <p class="subtitle">
+            Previous sentiment analysis results
+        </p>
+
+        {% if reviews %}
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Review</th>
+                        <th>Sentiment</th>
+                        <th>Confidence</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for review in reviews %}
+
+                    <tr>
+                        <td>{{ review[0] }}</td>
+
+                        <td>{{ review[1] }}</td>
+
+                        <td>
+                            <span class="sentiment">
+                                {{ review[2] }}
+                            </span>
+                        </td>
+
+                        <td>
+                            {{ "%.2f"|format(review[3] * 100) }}%
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <p class="empty-message">
+            No reviews have been analyzed yet.
+        </p>
+
+        {% endif %}
+
+        <a href="/" class="history-button">
+            ← Back to Analyzer
+        </a>
+
+    </div>
+
+</body>
+</html>
+
