@@ -17,7 +17,7 @@ A web-based resume parsing application that extracts relevant information from r
 * PostgreSQL
 * Resume parsing libraries
 
-[View Resume Parser Project](./Task_1-Resume-Parser)
+[View Resume Parser Project](./Resume_Parser)
 
 ---
 
@@ -61,7 +61,7 @@ The current model performs binary sentiment classification:
 
 > Note: The model does not have a separate NEUTRAL class. Neutral-style reviews are therefore classified into either POSITIVE or NEGATIVE.
 
-[View Sentiment Analyzer Project](./Task_2-Sentiment-Analyzer)
+[View Sentiment Analyzer Project](./AI_Based_Sentiment_Analyzer)
 
 ---
 
