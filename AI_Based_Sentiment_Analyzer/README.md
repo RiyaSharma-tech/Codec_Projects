@@ -73,7 +73,7 @@ Review available in History
 ## 📂 Project Structure
 
 ```text
-Task_2-Sentiment-Analyzer/
+AI_Based_Sentiment_Analyzer/
 │
 ├── app.py
 ├── requirements.txt
@@ -105,7 +105,7 @@ git clone https://github.com/RiyaSharma-tech/Codec_Projects/tree/main/AI_Based_S
 ### 2. Navigate to the project folder
 
 ```bash
-cd Task_2-Sentiment-Analyzer
+cd AI_Based_Sentiment_Analyzer
 ```
 
 ### 3. Install the required packages
@@ -197,7 +197,7 @@ Through this project, I gained practical experience with:
 
 ## 🎯 Internship
 
-This project was developed as part of the **Codec Technologies Internship**.
+This project was developed as part of the **Codec Technologies Python Developer Internship**.
 
 ## 👩‍💻 Author
 
