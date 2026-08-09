@@ -99,12 +99,13 @@ AI_Based_Sentiment_Analyzer/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/RiyaSharma-tech/Codec_Projects/tree/main/AI_Based_Sentiment_Analyzer
+git clone https://github.com/RiyaSharma-tech/Codec_Projects.git
 ```
 
 ### 2. Navigate to the project folder
 
 ```bash
+cd Codec_Projects
 cd AI_Based_Sentiment_Analyzer
 ```
 
