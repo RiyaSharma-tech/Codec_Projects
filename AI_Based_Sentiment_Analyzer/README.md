@@ -99,7 +99,7 @@ Task_2-Sentiment-Analyzer/
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_LINK
+git clone https://github.com/RiyaSharma-tech/Codec_Projects/tree/main/AI_Based_Sentiment_Analyzer
 ```
 
 ### 2. Navigate to the project folder
