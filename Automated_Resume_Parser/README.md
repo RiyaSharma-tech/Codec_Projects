@@ -66,27 +66,32 @@ The extraction process includes:
 
 ## 📂 Project Structure
 
-Automated_Resume_Parser/
-├── app.py
-├── parser.py
-├── db.py
-├── extract_text.py
-├── search_candidates.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-├── templates/
-│   ├── index.html
-│   └── search.html
-├── static/
-│   └── style.css
-├── screenshots/
-│   ├── main_page.png
-│   ├── parsed_resume.png
-│   ├── search_page.png
-│   └── search_results.png
-├── resumes/
-└── uploads/
+    Automated_Resume_Parser/
+    │
+    ├── app.py
+    ├── parser.py
+    ├── db.py
+    ├── extract_text.py
+    ├── search_candidates.py
+    ├── requirements.txt
+    ├── README.md
+    ├── .gitignore
+    │
+    ├── templates/
+    │   ├── index.html
+    │   └── search.html
+    │
+    ├── static/
+    │   └── style.css
+    │
+    ├── screenshots/
+    │   ├── main_page.png
+    │   ├── parsed_resume.png
+    │   ├── search_page.png
+    │   └── search_results.png
+    │
+    ├── resumes/
+    └── uploads/
 
 > The resumes/ and uploads/ folders are used locally for resume files and uploaded files. Their contents are excluded from the GitHub repository using .gitignore.
 
