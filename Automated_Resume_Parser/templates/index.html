@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Automated Resume Parser</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>Automated Resume Parser</h1>
+
+    <p class="subtitle">
+        Upload a resume and extract candidate information using AI.
+    </p>
+
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <input
+            type="file"
+            name="resume"
+            accept=".pdf"
+            required
+        >
+
+        <button type="submit">
+            Parse Resume
+        </button>
+
+    </form>
+
+
+    {% if error %}
+
+        <div class="error">
+            {{ error }}
+        </div>
+
+    {% endif %}
+
+
+    {% if candidate %}
+
+        <div class="result-card">
+
+            <h2>Candidate Information</h2>
+
+            <p>
+                <strong>Name:</strong>
+                {{ candidate.name }}
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                {{ candidate.email }}
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                {{ candidate.phone }}
+            </p>
+
+
+            <p>
+                <strong>Skills:</strong>
+            </p>
+
+            <p>
+                {{ candidate.skills | join(", ") }}
+            </p>
+
+
+            <p>
+                <strong>Education:</strong>
+            </p>
+
+            {% for item in candidate.education %}
+
+                <p>{{ item }}</p>
+
+            {% endfor %}
+
+        </div>
+
+    {% endif %}
+
+<a href="/search" class="history-button">
+    Search Candidates
+</a>
+
+</div>
+
+</body>
+
+</html>

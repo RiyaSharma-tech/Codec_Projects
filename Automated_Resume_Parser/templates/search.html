@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search Candidates</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Search Candidates</h1>
+
+    <p class="subtitle">
+        Search stored candidates by name, email, skills, phone, or education.
+    </p>
+
+
+    <form method="GET" action="/search">
+
+        <input
+            type="text"
+            name="keyword"
+            placeholder="Enter keyword..."
+            value="{{ keyword }}"
+            required
+        >
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+
+    {% if keyword %}
+
+        {% if candidates %}
+
+            <div class="search-results">
+
+                <h2>Search Results</h2>
+
+                {% for candidate in candidates %}
+
+                    <div class="candidate-card">
+
+                        <h3>{{ candidate["name"] }}</h3>
+
+                        <p>
+                            <strong>Email:</strong>
+                            {{ candidate["email"] }}
+                        </p>
+
+                        <p>
+                            <strong>Phone:</strong>
+                            {{ candidate["phone"] }}
+                        </p>
+
+                        <p>
+                            <strong>Skills:</strong>
+                            {{ candidate["skills"] }}
+                        </p>
+
+                        <p>
+                            <strong>Education:</strong>
+                            {{ candidate["education"] }}
+                        </p>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% else %}
+
+            <p class="empty-message">
+                No matching candidates found.
+            </p>
+
+        {% endif %}
+
+    {% endif %}
+
+
+    <a href="/" class="history-button">
+        ← Back to Resume Parser
+    </a>
+
+</div>
+
+</body>
+
+</html>
