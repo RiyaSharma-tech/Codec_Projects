@@ -104,6 +104,7 @@ git clone https://github.com/RiyaSharma-tech/Codec_Projects.git
 ### 2. Navigate to the project folder
 
 cd Codec_Projects
+
 cd Automated_Resume_Parser
 
 ### 3. Install the required packages
